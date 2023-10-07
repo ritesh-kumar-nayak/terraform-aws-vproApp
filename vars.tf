@@ -84,7 +84,7 @@ variable "PubSub1_CIDER" {
 }
 
 variable "PubSub2_CIDER" {
-  default = "172.21.2.0/24"
+  default = "172.21.7.0/24"
 
 }
 
