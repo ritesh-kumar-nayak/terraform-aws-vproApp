@@ -1,1 +1,3 @@
 .terraform/
+.vprofile-key
+.vprofile-key.pub
