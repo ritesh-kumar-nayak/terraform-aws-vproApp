@@ -1,0 +1,4 @@
+sudo apt update
+sudo apt install git mysql-client -y
+git clone -b vp-rem https://github.com/ritesh-kumar-nayak/vprofile-project-forked.git   # Cloning the source code to the home directory of ubuntu user
+mysql -h ${rds-endpoint} -u ${dbuser} --password=${dbpass} accounts < /home/ubuntu/vprofile-project-forked/src/main/resources/db_backup.sql   # this will import the backup.sql file from the project source code

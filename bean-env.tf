@@ -1,6 +1,6 @@
 resource "aws_elastic_beanstalk_environment" "Vpro-bean-prod" {
   name                = "Vpro-bean-prod"
-  application         = aws_elastic_beanstalk_application.vpro-prod
+  application         = aws_elastic_beanstalk_application.vpro-prod.name
   solution_stack_name = "64bit Amazon Linux 2 v4.3.12 running Tomcat 8.5 Corretto 11" # There are multiple solution stacks such as Tomcat, Docker, Go, Node.JS etc. that we can find on Documentation. Our prefered is Tomcat
   cname_prefix        = "Vpro-bean-prod-domain"                                       # this will be the url
 

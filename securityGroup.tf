@@ -90,6 +90,15 @@ resource "aws_security_group" "vpro-backend-sg" {
     security_groups = [aws_security_group.vpro-prod-sg.id] # Beanstalk instances where our application will run can access the backends
   }
 
+  ingress {
+
+    from_port       = 3306
+    to_port         = 3306
+    protocol        = "tcp"
+    security_groups = [aws_security_group.vpro-bastionHost-sg.id]
+
+  }
+
 }
 
 # Now as the backend security group has been created, the bakend services should be able to interact with each other.
